@@ -1,5 +1,5 @@
-# TwitDisc-Webhook-Server
-Discord Webhook server that uses Twitter(X) API to send specific X feed to a Discord Webhook bot
+# TwitDisc-Bot
+A script that uses node.js to initialize Twitter(X) API to send specific X feed to a discord.js bot
 
 # Current Issues
 X API v2 endpoints having issues:
