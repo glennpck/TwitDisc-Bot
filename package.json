@@ -3,15 +3,17 @@
   "description": "Discord Webhook server that uses Twitter API to send specific Twitter feed to a Discord Webhook bot",
   "version": "1.0.0",
   "main": "main.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/main.js"
+    "start": "node .main.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^14.13.0"
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "node-fetch": "^3.3.2",
+    "twitter-v2": "^1.1.0"
   }
 }
