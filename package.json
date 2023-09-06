@@ -1,0 +1,17 @@
+{
+  "name": "twitdisc-webhook-server",
+  "description": "Discord Webhook server that uses Twitter API to send specific Twitter feed to a Discord Webhook bot",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.13.0"
+  }
+}
