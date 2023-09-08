@@ -1,6 +1,6 @@
 {
-  "name": "twitdisc-webhook-server",
-  "description": "Discord Webhook server that uses Twitter API to send specific Twitter feed to a Discord Webhook bot",
+  "name": "TwitDisc-Bot",
+  "description": "Discord Bot that uses Twitter API to fetch tweets and write the tweets into a discord message",
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
