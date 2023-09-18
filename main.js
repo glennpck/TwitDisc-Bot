@@ -15,7 +15,6 @@ var twitter = new Twitter({
 })
 
 async function sendMessage (tweet, client){
-    console.log(tweet)
     const url = "https://twitter.com/user/status/" + tweet.id;
     try {
       const channel = await client.channels.fetch(process.env.DISCORD_CHANNEL_ID)
@@ -30,10 +29,8 @@ async function listenForever(streamFactory, dataConsumer) {
         for await (const { data } of streamFactory()) {
             dataConsumer(data);
         }
-        console.log('Stream disconnected healthily. Reconnecting.');
         listenForever(streamFactory, dataConsumer);
         } catch (error) {
-        console.warn('Stream disconnected with error. Retrying.', error);
     }
 }
 
@@ -44,16 +41,13 @@ async function setup () {
         'media.fields': [ 'url' ]
     }
     try {
-        console.log('Setting up Twitter...')
         const body = {
             "add": [
                 {"value": "from" + process.env.TWITTER_USER_NAME, "tag": "from Me!!"}
             ]
         }
         const r = await twitter.post("tweets/search/stream/rules", body);
-        console.log(r);
     } catch (err) {
-        console.log(err)
     }
 
     listenForever(
